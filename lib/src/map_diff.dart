@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 
 final _listDeepEq = DeepCollectionEquality().equals;
 
-/// Returns a new map contend only difference between maps
+/// Compares two maps and returns the differences between them.
 /// [left] Reference map
 /// [right] Map to compare
 Map mapDiff(Map left, Map right) {
