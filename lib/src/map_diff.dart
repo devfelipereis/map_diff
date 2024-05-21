@@ -36,5 +36,6 @@ Map mapDiff(Map left, Map right) {
     rightCopy.remove(leftKey);
   });
 
-  return {...diff, ...rightCopy};
+  return {...diff, ...rightCopy}
+    ..removeWhere((key, value) => (value is Map && value.isEmpty));
 }
