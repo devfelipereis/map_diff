@@ -1,5 +1,7 @@
 # map_diff
 
+[![Build Status](https://github.com/devfelipereis/map_diff/workflows/Dart/badge.svg?branch=main&event=push)](https://github.com/devfelipereis/map_diff/actions)
+
 A dart package to compare two maps and return the differences between them.
 
 ## Getting Started
