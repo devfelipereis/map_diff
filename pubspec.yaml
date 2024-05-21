@@ -1,6 +1,6 @@
 name: map_diff
 description: A dart package to compare two maps and return the differences between them.
-version: 1.0.0
+version: 1.0.0+1
 repository: https://github.com/devfelipereis/map_diff
 
 environment:
