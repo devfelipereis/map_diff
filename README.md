@@ -10,7 +10,7 @@ A dart package to compare two maps and return the differences between them.
 
 ```yaml
 dependencies:
-  map_diff: ^1.0.0
+  map_diff: ^1.0.1
 ```
 
 ### Example
@@ -18,11 +18,25 @@ dependencies:
 ```dart
 import 'package:map_diff/map_diff.dart';
 
-final left = <String, dynamic>{};
-final right = <String, dynamic>{'key': 'value'};
-final diff = mapDiff(left, right);
+void main() {
+  final left = <String, dynamic>{
+    'key': 'value',
+    'key2': 'value2',
+    'key3': {'key4': 'value4'},
+    'key6': {
+      'key7': {'key8': 'key9'}
+    },
+  };
+  final right = <String, dynamic>{
+    'key2': 'value2',
+    'key3': {'key4': 'value5'},
+    'key6': {'key7': {}},
+  };
 
-print(diff); // {key: value}
+  final diff = mapDiff(left, right);
+
+  print(diff); // {key: value, key3: {key4: value5}, key6: {key7: {key8: key9}}}
+}
 ```
 
 ### Tests
